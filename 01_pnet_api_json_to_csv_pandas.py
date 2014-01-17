@@ -44,29 +44,29 @@ years_active = [
 '2012',
 '2013']
 
-# for year in years_active:
-# 	url = preurl + yearqu + str(year) + midurl + apikey
-# 	print url
-# 	d = pd.read_json(url)
-# 	d.to_csv("shows_"+str(year)+".csv", sep=',',index=False)
+for year in years_active:
+	url = preurl + yearqu + str(year) + midurl + apikey
+	print url
+	d = pd.read_json(url)
+	d.to_csv("shows_"+str(year)+".csv", sep=',',index=False)
 
-# all_csvs = glob.glob("*.csv")
+all_csvs = glob.glob("*.csv")
 
-# print all_csvs
+print all_csvs
 
-# df_list = []
+df_list = []
 
 i = 0
-# for allcsvs in all_csvs:
-# 	df = pd.read_csv(allcsvs, header=0)
-# 	df_list.append(df)
-# 	i += 1
-# 	print i
+for allcsvs in all_csvs:
+	df = pd.read_csv(allcsvs, header=0)
+	df_list.append(df)
+	i += 1
+	print i
 
-# df = pd.concat(df_list)
-# df = df.sort_index(axis=1)
+df = pd.concat(df_list)
+df = df.sort_index(axis=1)
 
-# df.to_csv('all_shows.csv', sep=',', index=False)
+df.to_csv('all_shows.csv', sep=',', index=False)
 
 with open('all_shows.csv', 'r') as csvinput:
 	with open('all_shows_working.csv', 'w') as csvoutput:
@@ -100,5 +100,3 @@ with open('all_shows.csv', 'r') as csvinput:
 			print i
 
 		writer.writerows(all)
-
-#add 2 new fields (lat, lng) (similar to loop above and then use split (( for x and then , for y
