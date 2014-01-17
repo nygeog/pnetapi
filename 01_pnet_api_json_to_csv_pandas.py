@@ -8,7 +8,7 @@ from geopy.geocoders import GoogleV3
 
 geolocator = GoogleV3()
 
-pauser = .01
+pauser = .1
 
 preurl = "https://api.phish.net/api.js?api=2.0&format=json&method=pnet.shows.query&"
 yearqu = "year="
