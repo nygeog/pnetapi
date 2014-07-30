@@ -96,7 +96,7 @@ with open('all_shows.csv', 'r') as csvinput:
 				print 'missing'
 
 			time.sleep(pauser)
-			i += 1
-			print i
+			#i += 1
+			#print i
 
 		writer.writerows(all)
